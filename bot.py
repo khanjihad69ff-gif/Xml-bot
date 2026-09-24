@@ -12,6 +12,12 @@ ADMIN_ID = 8017043698  # আপনার অ্যাডমিন আইডি
 bot = telebot.TeleBot(TOKEN)
 DATA_FILE = "files_db.json"
 
+# পুরোনো বা আটকে থাকা সেশন জোরপূর্বক ক্লিয়ার করার জন্য
+try:
+    bot.remove_webhook()
+except Exception as e:
+    print(f"Webhook clear error: {e}")
+
 # ফ্লাস্ক সার্ভার (ক্লাউডে বট সচল রাখার জন্য জরুরি)
 server = Flask(__name__)
 
@@ -167,4 +173,4 @@ if __name__ == "__main__":
     # ফ্লাস্ক সার্ভার রান করা (পোট বাইন্ডিং)
     port = int(os.environ.get("PORT", 5000))
     server.run(host="0.0.0.0", port=port)
-    
+                                      
