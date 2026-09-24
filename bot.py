@@ -5,7 +5,7 @@ import os
 import random
 from flask import Flask, request
 
-TOKEN = "8810688330:AAGhNFfL0mcjsA3q7pQjw-p5PMoZ27-xCaM"
+TOKEN = "810688330:AAEHpDUUQz5kpsb-_9m-kctq9nDmMqICLDc"
 CHANNEL_USERNAME = "@Zihad_Editz"
 ADMIN_ID = 8017043698  # আপনার অ্যাডমিন আইডি
 
